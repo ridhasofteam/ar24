@@ -71,9 +71,11 @@ class AttachmentService
                 
                     return $response;
             }
-        
-            $encode_encrypted_response = TranformerHelper::encodage($encrypted_response);   
-            return TranformerHelper::jsonEncode($encode_encrypted_response);
+             /**********************************************************************  
+              avant la correction de la méthode de decryptage dans la documentaion de l'api  
+              $encode_encrypted_response = TranformerHelper::encodage($encrypted_response); 
+             *************************************************************************/  
+            return TranformerHelper::jsonEncode($encrypted_response);
        }
        catch(\Exception $exception) {
             $response = [
