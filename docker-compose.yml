@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: ar24
+    ports:
+    - 81:80
+    volumes:
+    - .:/srv/app/
+    - ./vendor:/srv/app/vendor:delegated
+    environment:
+      APP_ENV: dev
+      APP_SECRET: "966536d311ddae0996d1ffd21efa1027"
+      MAILER_URL: "null://localhost"
+
+
+
