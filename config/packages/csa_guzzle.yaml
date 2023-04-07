@@ -4,7 +4,7 @@
 csa_guzzle:
     profiler: '%kernel.debug%'
     clients:
-        avenir_geopo:
+        sandbox:
             lazy: true
             config:
                 base_uri: 'https://sandbox.ar24.fr'
